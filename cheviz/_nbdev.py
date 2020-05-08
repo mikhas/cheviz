@@ -2,7 +2,10 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"cheviz": "00_core.ipynb"}
+index = {"makeThreatenedSquares": "00_core.ipynb",
+         "show": "00_core.ipynb",
+         "defence": "00_core.ipynb",
+         "attack": "00_core.ipynb"}
 
 modules = ["core.py"]
 

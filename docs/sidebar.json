@@ -1,6 +1,7 @@
 {
   "cheviz": {
     "Overview": "/",
-    "cheviz core": "/core"
+    "cheviz core": "/core",
+    "cheviz data": "/data"
   }
 }
