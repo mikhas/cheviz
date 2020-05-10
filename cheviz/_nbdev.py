@@ -8,7 +8,8 @@ index = {"makeThreatenedSquares": "00_core.ipynb",
          "attack": "00_core.ipynb",
          "fetch": "01_data.ipynb",
          "games": "01_data.ipynb",
-         "makeMoveSequencer": "01_data.ipynb"}
+         "makeMoveSequencer": "01_data.ipynb",
+         "diffReduce": "01_data.ipynb"}
 
 modules = ["core.py",
            "data.py"]
