@@ -502,7 +502,7 @@ board<span class="o">?</span>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The board indexing chosen by Python chess can feel cumbersome. Essentially, the rows are permutated by 7 row shifts.
+<p>The board indexing chosen by Python chess can feel cumbersome. Essentially, the rows are permutated by 7-rows shift.
 To map board indices to array (matrix) indices we need to compute a row offset and adjust the index like so:</p>
 
 <pre><code> 0  1  2 ...  7 ==&gt; row_offset + i % dim ==&gt;  56 57 58 ... 63
@@ -513,7 +513,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 40 41 42 ... 47                               16 17 18 ... 23
 48 49 50 ... 55                                8  9 10 ... 15
 56 57 58 ... 63                                0  1  2 ...  7</code></pre>
-<p><code>row_offset</code> simulates that row shift like so: <code>(dim - 1 - (i // dim)) * dim</code>, where <code>i // dim</code> tells us the current row of the index.</p>
+<p><code>row_offset</code> simulates the row shift like so: <code>(dim - 1 - (i // dim)) * dim</code>, where <code>i // dim</code> tells us the current row of the index.</p>
 
 </div>
 </div>

@@ -70,7 +70,7 @@ cheviz	       docs		Makefile     requirements.txt
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In Jupyter there is that nice <code>!some shell command</code> escape hatch that would allow us to simply use <code>curl</code> or <code>wget</code>. However, we cannot use the escape hatch in code we want to export as a module. So we use urllib and shutil instead. Because of Python's <code>with ... as ...</code> pattern this is rather nice code.</p>
+<p>In Jupyter there is that nice <code>!some shell command</code> escape hatch that would allow us to simply use <code>curl</code> or <code>wget</code>. However, we cannot use the escape hatch in code we want to export as a module. So we use urllib and shutil instead. Because of Python's <code>with ... as ...</code> pattern this produces unexpectedly elegant code (which I didn't come up with myself but found on <a href="https://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3/7244263#7244263">stack overflow, obviously</a>).</p>
 
 </div>
 </div>
@@ -195,7 +195,7 @@ Candidates_1953.pgn  WijkaanZee2019.pgn
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="games" class="doc_header"><code>games</code><a href="https://github.com/fastai/cheviz/tree/master/cheviz/data.py#L31" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>games</code>(<strong><code>pgn_name</code></strong>:<code>str</code>)</p>
+<h4 id="games" class="doc_header"><code>games</code><a href="https://github.com/fastai/cheviz/tree/master/cheviz/data.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>games</code>(<strong><code>pgn_name</code></strong>:<code>str</code>)</p>
 </blockquote>
 
 </div>
@@ -240,8 +240,8 @@ Candidates_1953.pgn  WijkaanZee2019.pgn
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 767 ms, sys: 4.02 ms, total: 771 ms
-Wall time: 772 ms
+<pre>CPU times: user 793 ms, sys: 19.3 ms, total: 812 ms
+Wall time: 813 ms
 </pre>
 </div>
 </div>
@@ -252,7 +252,7 @@ Wall time: 772 ms
 
 <div class="output_text output_subarea output_execute_result">
 <pre>(Board(&#39;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&#39;),
- &lt;Mainline at 0x7fd0c284a1d0 (1. c4 Nf6 2. g3 e6 3. Bg2 d5 4. d4 dxc4 5. Qa4+ Nbd7 6. Nf3 a6 7. Qxc4 b5 8. Qc6 Rb8 9. Bf4 Nd5 10. Bg5 Be7 11. Bxe7 Qxe7 12. O-O Bb7 13. Qc2 c5 14. dxc5 Nxc5 15. Rc1 Rc8 16. Nc3 Nf6 17. b4 Na4 18. Qb3 Nxc3 19. Rxc3 Rxc3 20. Qxc3 O-O 21. Rc1 Rd8 22. a3 Nd5 23. Qd4 f6 24. Ne1 e5 25. Qc5 Qxc5 26. bxc5 Bc6 27. Rd1 Rd7 28. Bh3 Re7 29. Nc2 a5 30. Bg2 Rd7 31. Bh3 Re7 32. Kf1 Kf7 33. Ke1 Rc7 34. Rd3 Bb7 35. Ne3 Rxc5 36. Nf5 Bc6 37. Nd6+ Kf8 38. Bg2 g6 39. Kd2 Ke7 40. Ne4 Rc4 41. f3 f5 42. Nf2 Ra4 43. Nd1 e4 44. fxe4 fxe4 45. Rb3 Rd4+ 46. Kc1 b4 47. Ne3 Nc3 48. axb4 Nxe2+ 49. Kb1 Ba4 50. Rb2 Nc3+ 51. Kc1 axb4 52. Rd2 Rxd2 53. Kxd2 Kd6 54. Ng4 Kc5 55. h4 Kd4 56. h5 gxh5 57. Ne3 Nb1+ 58. Ke2 Bb5+ 59. Kf2 b3)&gt;,
+ &lt;Mainline at 0x7fd7a37071d0 (1. c4 Nf6 2. g3 e6 3. Bg2 d5 4. d4 dxc4 5. Qa4+ Nbd7 6. Nf3 a6 7. Qxc4 b5 8. Qc6 Rb8 9. Bf4 Nd5 10. Bg5 Be7 11. Bxe7 Qxe7 12. O-O Bb7 13. Qc2 c5 14. dxc5 Nxc5 15. Rc1 Rc8 16. Nc3 Nf6 17. b4 Na4 18. Qb3 Nxc3 19. Rxc3 Rxc3 20. Qxc3 O-O 21. Rc1 Rd8 22. a3 Nd5 23. Qd4 f6 24. Ne1 e5 25. Qc5 Qxc5 26. bxc5 Bc6 27. Rd1 Rd7 28. Bh3 Re7 29. Nc2 a5 30. Bg2 Rd7 31. Bh3 Re7 32. Kf1 Kf7 33. Ke1 Rc7 34. Rd3 Bb7 35. Ne3 Rxc5 36. Nf5 Bc6 37. Nd6+ Kf8 38. Bg2 g6 39. Kd2 Ke7 40. Ne4 Rc4 41. f3 f5 42. Nf2 Ra4 43. Nd1 e4 44. fxe4 fxe4 45. Rb3 Rd4+ 46. Kc1 b4 47. Ne3 Nc3 48. axb4 Nxe2+ 49. Kb1 Ba4 50. Rb2 Nc3+ 51. Kc1 axb4 52. Rd2 Rxd2 53. Kxd2 Kd6 54. Ng4 Kc5 55. h4 Kd4 56. h5 gxh5 57. Ne3 Nb1+ 58. Ke2 Bb5+ 59. Kf2 b3)&gt;,
  Headers(Event=&#39;ct&#39;, Site=&#39;Zurich&#39;, Date=&#39;1953.??.??&#39;, Round=&#39;01&#39;, White=&#39;Szabo L&#39;, Black=&#39;Geller E&#39;, Result=&#39;0-1&#39;))</pre>
 </div>
 
@@ -330,7 +330,7 @@ Wall time: 772 ms
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fd0b414fc50&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fd789013c50&gt;</pre>
 </div>
 
 </div>
@@ -410,7 +410,7 @@ Wall time: 772 ms
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">board</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">board</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">moves_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">attack</span><span class="p">))</span>
+<span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">attack</span><span class="p">)),</span> <span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">defence</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -425,7 +425,8 @@ Wall time: 772 ms
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fd0b408a0b8&gt;</pre>
+<pre>(&lt;matplotlib.image.AxesImage at 0x7fd788f4d320&gt;,
+ &lt;matplotlib.image.AxesImage at 0x7fd788f01cc0&gt;)</pre>
 </div>
 
 </div>
@@ -442,12 +443,260 @@ Wall time: 772 ms
 
 </div>
 
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I am convinced one can generate useful insight into how chess works from just these two metrics alone, once visualized. Notice that we do not care about pieces, at least not directly. We only care about how they affect the position. You could argue that this view is blind to how positions change between moves whereas understanding positional change is the critical skill to master in chess. But that is not entirely true. Much like words in a language, the likelyhood of position A being followed up by B can be expressed as Markov chain. The examples I found seem to focus more on the pieces than on the position directly, like this Youtube video: <a href="https://www.youtube.com/watch?v=63HHmjlh794">https://www.youtube.com/watch?v=63HHmjlh794</a></p>
+<p>So while chess moves could be infered I would like to propose another metric instead to cover the connection between positions. Let's add up the matrices of two positions connected by a valid move sequence.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">board</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">board</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">moves_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># white moves</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">attack</span><span class="p">)</span>
+
+<span class="n">board</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">moves_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># black moves</span>
+<span class="n">board</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">moves_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># white moves again</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">attack</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.image.AxesImage at 0x7fd788eaaf98&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's call this idea of a metric <strong>positional echo</strong>. There are two obvious ways to measure it:</p>
+<p><strong>A)</strong> For a given move sequence and a given side, add up the two positions of the first move of that side and the last move of that side in the move sequence.\
+<strong>B)</strong> Add up all positions after moves of a given side in that sequence.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="makeMoveSequencer" class="doc_header"><code>makeMoveSequencer</code><a href="https://github.com/fastai/cheviz/tree/master/cheviz/data.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeMoveSequencer</code>(<strong><code>moves_list</code></strong>:<code>list</code>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ms</span> <span class="o">=</span> <span class="n">makeMoveSequencer</span><span class="p">(</span><span class="n">moves_list</span><span class="p">)</span>
+<span class="n">move_echo</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ms</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">),</span> <span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">attack</span><span class="p">))</span>
+<span class="n">move_echo</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">move_echo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([  5.,   0.,  16.,   2.,   4.,   1.,   0.,   0.,   5.,  10.,  15.,
+         15.,   3.,   3.,   2.,   5.,   8.,  19.,  13.,  22.,  16.,  12.,
+          6.,  11.,  15.,  21.,  41.,  58.,  37.,  28.,  27.,   0.,  15.,
+         35.,  37.,  39.,  43.,  65.,  26.,  80.,  40.,  47.,  83.,  74.,
+         92.,  76.,   2.,  56.,   5.,  23.,  64.,  81.,   9.,  11.,  16.,
+          2.,  25.,  38.,  36.,  73.,  50., 116.,  14.,  60.]),
+ &lt;matplotlib.image.AxesImage at 0x7fd788eedef0&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we record a game and store the matrices for each move, we can calculate the positional echo after the fact. Parameters as follows:</p>
+<ol>
+<li><strong>Echo length (int):</strong> the length of the move sequence, or the distance between two positions.</li>
+<li><strong>Filtered by side (bool):</strong> whether to apply echo length only to moves from a given side or not.</li>
+<li><strong>record all (bool):</strong> whether to record and sum up all positions affected by echo length or only first and last position. Affected by previous parameter.</li>
+<li><strong>aggregate function:</strong> what function to apply to the positional matrices. We can simply add up stuff or perhaps we want to look at the positional delta instead. For the API it might make sense to roll the previous boolean parameters into this function parameter. </li>
+</ol>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mr</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">ms</span><span class="p">(</span><span class="n">mr</span><span class="p">,</span> <span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">defence</span><span class="p">))),</span> <span class="n">core</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">ms</span><span class="p">(</span><span class="n">mr</span><span class="p">,</span> <span class="n">chess</span><span class="o">.</span><span class="n">BLACK</span><span class="p">,</span> <span class="n">core</span><span class="o">.</span><span class="n">defence</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&lt;matplotlib.image.AxesImage at 0x7fd788d8c0b8&gt;,
+ &lt;matplotlib.image.AxesImage at 0x7fd788d3ea20&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice how we use the same range object as argument for either side. In chess there are half moves and full moves. The notation <code>1. e4 c5</code> denotes a full move, consisting of two half moves, the white half move <code>1. e4</code> and the black response <code>1. ... c5</code>. A game with 10 full moves has, in the trivial case, 10 white half moves and 10 black half moves. Our range object uses half moves, but there are ugly corner cases. Consider a tactics where black starts to move: <code>1. ... Qe1+</code>, or a game that ends in the 21. full move, with white checkmating black: <code>21. Rh8++</code>. In either case, we're starting to lose a half move here and there. We try to ignore these problems in our data pipeline as much as possible, which is why our range notation of half moves leaves the effect of those corner cases for the API user to decide. To us, the range notation represents a slice of the total moves list (one can argue that <code>range</code> is perhaps misused here).</p>
+<p>I feel like this is one of the typical cases where as a data scientist you choose to simplify data despite deeper domain knowledge available to you. This can make data more robust for later analysis as the API becomes simpler to use, to the point where a data scientist could completely ignore domain knowledge. Just imagine for a moment that you work in a larger team and got stuck generating plausible insight. In your despair you hand off the problem to the brilliant mathematician in your team who naturally has no domain expertise at all. Yet that guy will effortlessly find the missing link because they could look at the generated data and instrument it without special knowledge about corner cases and such. It is therefore useful to keep this kind of trade-off in regard to data simplification in mind.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
