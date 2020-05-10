@@ -5,9 +5,12 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 index = {"makeThreatenedSquares": "00_core.ipynb",
          "show": "00_core.ipynb",
          "defence": "00_core.ipynb",
-         "attack": "00_core.ipynb"}
+         "attack": "00_core.ipynb",
+         "fetch": "01_data.ipynb",
+         "games": "01_data.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "data.py"]
 
 doc_url = "https://fastai.github.io/cheviz/"
 

@@ -8,18 +8,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import chess
 
+def makeThreatenedSquares(**kwargs) -> Callable:
+    board = kwargs['board'] if 'board' in kwargs else chess.Board()
+    if 'fen' in kwargs:
+        board.set_fen(kwargs['fen'])
 
-def makeThreatenedSquares() -> Callable:
     max_index = len(chess.SQUARES) - 1
-    board = chess.Board()
+    dim = round((max_index + 1) ** 0.5)
 
-    def threatenedSquares(side:bool, pos_fen:str, filter_by:Callable = None)->np.ndarray:
-        board.set_fen(pos_fen)
+    def threatenedSquares(side:bool, filter_by:Callable=None)->np.ndarray:
         data = np.zeros((max_index + 1,))
 
         for i in range(max_index + 1):
             if filter_by == None or filter_by(board, side, i):
-                data[max_index - i] = len(board.attackers(side, i))
+                row_offset = (dim - 1 - (i // dim)) * dim
+                data[row_offset + i % dim] = len(board.attackers(side, i))
 
         return data
 
