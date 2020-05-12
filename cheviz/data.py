@@ -52,9 +52,15 @@ def makeMoveSequencer(moves_list:list)->Callable:
 
         for index in range(0, min(len(moves_list), moves_range.stop)):
             was_our_turn = board.turn == side # check *before* pushing next move
+            adjusted_start = moves_range.start if was_our_turn else moves_range.start - 1
             board.push(moves_list[index])
-            if index >= moves_range.start and was_our_turn:
+            if index >= adjusted_start and was_our_turn:
                 result.append(ts(side, square_filter))
+
+
+        # if no move was found by moves_range, use initial board configuration instead:
+        if len(result) == 0:
+            result.append(ts(side, square_filter))
 
         return result
 
@@ -64,7 +70,7 @@ def makeMoveSequencer(moves_list:list)->Callable:
 def diffReduce(data:list):
     while len(data) > 1:
         data = [data[i] - data[i + 1] for i in range(len(data) - 1)]
-    data = data.pop()
+    data = data.pop() if len(data) == 1 else np.zeros(64)
     return data
 
 # Cell
