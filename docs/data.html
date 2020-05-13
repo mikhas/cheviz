@@ -94,7 +94,7 @@ description: "API details."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="fetch" class="doc_header"><code>fetch</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L10" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fetch</code>()</p>
+<h4 id="fetch" class="doc_header"><code>fetch</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fetch</code>()</p>
 </blockquote>
 
 </div>
@@ -196,7 +196,31 @@ Candidates_1953.pgn  WijkaanZee2019.pgn
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="games" class="doc_header"><code>games</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>games</code>(<strong><code>pgn_name</code></strong>:<code>str</code>)</p>
+<h4 id="from_game" class="doc_header"><code>from_game</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L32" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>from_game</code>(<strong><code>game</code></strong>:<code>Game</code>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="games" class="doc_header"><code>games</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L36" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>games</code>(<strong><code>pgn_name</code></strong>:<code>str</code>)</p>
 </blockquote>
 
 </div>
@@ -241,8 +265,8 @@ Candidates_1953.pgn  WijkaanZee2019.pgn
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 706 ms, sys: 11.7 ms, total: 717 ms
-Wall time: 717 ms
+<pre>CPU times: user 765 ms, sys: 0 ns, total: 765 ms
+Wall time: 764 ms
 </pre>
 </div>
 </div>
@@ -253,7 +277,7 @@ Wall time: 717 ms
 
 <div class="output_text output_subarea output_execute_result">
 <pre>(Board(&#39;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&#39;),
- &lt;Mainline at 0x7f31735e0160 (1. c4 Nf6 2. g3 e6 3. Bg2 d5 4. d4 dxc4 5. Qa4+ Nbd7 6. Nf3 a6 7. Qxc4 b5 8. Qc6 Rb8 9. Bf4 Nd5 10. Bg5 Be7 11. Bxe7 Qxe7 12. O-O Bb7 13. Qc2 c5 14. dxc5 Nxc5 15. Rc1 Rc8 16. Nc3 Nf6 17. b4 Na4 18. Qb3 Nxc3 19. Rxc3 Rxc3 20. Qxc3 O-O 21. Rc1 Rd8 22. a3 Nd5 23. Qd4 f6 24. Ne1 e5 25. Qc5 Qxc5 26. bxc5 Bc6 27. Rd1 Rd7 28. Bh3 Re7 29. Nc2 a5 30. Bg2 Rd7 31. Bh3 Re7 32. Kf1 Kf7 33. Ke1 Rc7 34. Rd3 Bb7 35. Ne3 Rxc5 36. Nf5 Bc6 37. Nd6+ Kf8 38. Bg2 g6 39. Kd2 Ke7 40. Ne4 Rc4 41. f3 f5 42. Nf2 Ra4 43. Nd1 e4 44. fxe4 fxe4 45. Rb3 Rd4+ 46. Kc1 b4 47. Ne3 Nc3 48. axb4 Nxe2+ 49. Kb1 Ba4 50. Rb2 Nc3+ 51. Kc1 axb4 52. Rd2 Rxd2 53. Kxd2 Kd6 54. Ng4 Kc5 55. h4 Kd4 56. h5 gxh5 57. Ne3 Nb1+ 58. Ke2 Bb5+ 59. Kf2 b3)&gt;,
+ &lt;Mainline at 0x7f315745b8d0 (1. c4 Nf6 2. g3 e6 3. Bg2 d5 4. d4 dxc4 5. Qa4+ Nbd7 6. Nf3 a6 7. Qxc4 b5 8. Qc6 Rb8 9. Bf4 Nd5 10. Bg5 Be7 11. Bxe7 Qxe7 12. O-O Bb7 13. Qc2 c5 14. dxc5 Nxc5 15. Rc1 Rc8 16. Nc3 Nf6 17. b4 Na4 18. Qb3 Nxc3 19. Rxc3 Rxc3 20. Qxc3 O-O 21. Rc1 Rd8 22. a3 Nd5 23. Qd4 f6 24. Ne1 e5 25. Qc5 Qxc5 26. bxc5 Bc6 27. Rd1 Rd7 28. Bh3 Re7 29. Nc2 a5 30. Bg2 Rd7 31. Bh3 Re7 32. Kf1 Kf7 33. Ke1 Rc7 34. Rd3 Bb7 35. Ne3 Rxc5 36. Nf5 Bc6 37. Nd6+ Kf8 38. Bg2 g6 39. Kd2 Ke7 40. Ne4 Rc4 41. f3 f5 42. Nf2 Ra4 43. Nd1 e4 44. fxe4 fxe4 45. Rb3 Rd4+ 46. Kc1 b4 47. Ne3 Nc3 48. axb4 Nxe2+ 49. Kb1 Ba4 50. Rb2 Nc3+ 51. Kc1 axb4 52. Rd2 Rxd2 53. Kxd2 Kd6 54. Ng4 Kc5 55. h4 Kd4 56. h5 gxh5 57. Ne3 Nb1+ 58. Ke2 Bb5+ 59. Kf2 b3)&gt;,
  Headers(Event=&#39;ct&#39;, Site=&#39;Zurich&#39;, Date=&#39;1953.??.??&#39;, Round=&#39;01&#39;, White=&#39;Szabo L&#39;, Black=&#39;Geller E&#39;, Result=&#39;0-1&#39;))</pre>
 </div>
 
@@ -337,7 +361,7 @@ Wall time: 717 ms
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f3158eeae80&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f3172b8cc50&gt;</pre>
 </div>
 
 </div>
@@ -558,7 +582,7 @@ Wall time: 717 ms
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="makeMoveSequencer" class="doc_header"><code>makeMoveSequencer</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeMoveSequencer</code>(<strong><code>moves_list</code></strong>:<code>list</code>)</p>
+<h4 id="makeMoveSequencer" class="doc_header"><code>makeMoveSequencer</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeMoveSequencer</code>(<strong><code>moves_list</code></strong>:<code>list</code>)</p>
 </blockquote>
 
 </div>
@@ -737,7 +761,7 @@ Wall time: 717 ms
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="diffReduce" class="doc_header"><code>diffReduce</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L70" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>diffReduce</code>(<strong><code>data</code></strong>:<code>list</code>)</p>
+<h4 id="diffReduce" class="doc_header"><code>diffReduce</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L75" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>diffReduce</code>(<strong><code>data</code></strong>:<code>list</code>)</p>
 </blockquote>
 
 </div>
@@ -1040,7 +1064,7 @@ Wall time: 717 ms
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="makeDiffReduceAnalyzer" class="doc_header"><code>makeDiffReduceAnalyzer</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L77" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeDiffReduceAnalyzer</code>(<strong><code>move_list</code></strong>:<code>list</code>, <strong><code>square_filter</code></strong>:<code>Callable</code>)</p>
+<h4 id="makeDiffReduceAnalyzer" class="doc_header"><code>makeDiffReduceAnalyzer</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L82" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeDiffReduceAnalyzer</code>(<strong><code>move_list</code></strong>:<code>list</code>, <strong><code>square_filter</code></strong>:<code>Callable</code>)</p>
 </blockquote>
 
 </div>
@@ -1064,7 +1088,7 @@ Wall time: 717 ms
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="zerosDiffReduce" class="doc_header"><code>zerosDiffReduce</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L86" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>zerosDiffReduce</code>(<strong><code>moves_total</code></strong>:<code>int</code>, <strong><code>move_window_size</code></strong>:<code>int</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>analyzer</code></strong>:<code>Callable</code>)</p>
+<h4 id="zerosDiffReduce" class="doc_header"><code>zerosDiffReduce</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/data.py#L91" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>zerosDiffReduce</code>(<strong><code>moves_total</code></strong>:<code>int</code>, <strong><code>move_window_size</code></strong>:<code>int</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>analyzer</code></strong>:<code>Callable</code>)</p>
 </blockquote>
 
 </div>

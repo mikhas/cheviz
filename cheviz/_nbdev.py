@@ -8,6 +8,7 @@ index = {"dimension": "00_core.ipynb",
          "defence": "00_core.ipynb",
          "attack": "00_core.ipynb",
          "fetch": "01_data.ipynb",
+         "from_game": "01_data.ipynb",
          "games": "01_data.ipynb",
          "makeMoveSequencer": "01_data.ipynb",
          "diffReduce": "01_data.ipynb",
@@ -15,7 +16,8 @@ index = {"dimension": "00_core.ipynb",
          "zerosDiffReduce": "01_data.ipynb",
          "showGameUi": "02_ui.ipynb",
          "download": "03_stockfish.ipynb",
-         "extract": "03_stockfish.ipynb"}
+         "extract": "03_stockfish.ipynb",
+         "playGame": "03_stockfish.ipynb"}
 
 modules = ["core.py",
            "data.py",
