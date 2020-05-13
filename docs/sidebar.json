@@ -3,6 +3,7 @@
     "Overview": "/",
     "cheviz core": "/core",
     "cheviz data": "/data",
-    "cheviz ui": "/ui"
+    "cheviz ui": "/ui",
+    "cheviz stockfish": "/stockfish"
   }
 }

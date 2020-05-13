@@ -18,6 +18,9 @@ entries:
     - output: web,pdf
       title: cheviz ui
       url: /ui
+    - output: web,pdf
+      title: cheviz stockfish
+      url: /stockfish
     output: web
     title: cheviz
   output: web

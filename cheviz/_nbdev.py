@@ -12,11 +12,14 @@ index = {"makeThreatenedSquares": "00_core.ipynb",
          "diffReduce": "01_data.ipynb",
          "makeDiffReduceAnalyzer": "01_data.ipynb",
          "zerosDiffReduce": "01_data.ipynb",
-         "showGameUi": "02_ui.ipynb"}
+         "showGameUi": "02_ui.ipynb",
+         "download": "03_stockfish.ipynb",
+         "extract": "03_stockfish.ipynb"}
 
 modules = ["core.py",
            "data.py",
-           "ui.py"]
+           "ui.py",
+           "stockfish.py"]
 
 doc_url = "https://fastai.github.io/cheviz/"
 
