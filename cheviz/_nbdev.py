@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"makeThreatenedSquares": "00_core.ipynb",
+index = {"dimension": "00_core.ipynb",
+         "makeThreatenedSquares": "00_core.ipynb",
          "show": "00_core.ipynb",
          "defence": "00_core.ipynb",
          "attack": "00_core.ipynb",

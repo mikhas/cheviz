@@ -11,7 +11,7 @@ from cheviz import core, data
 from typing import Callable
 import chess
 
-def showGameUi(games:list):
+def showGameUi(games:list, games_id:int=0, move:int=0, echo:int=1):
     board = chess.Board()
 
     def gameUi(reduced:Callable, square_filter:Callable, game_id:int=0):
@@ -33,12 +33,12 @@ def showGameUi(games:list):
                 core.show(reduced(ms(range(adjusted_wm - echo, adjusted_wm), chess.WHITE, square_filter)))
                 core.show(reduced(ms(range(adjusted_bm - echo, adjusted_bm), chess.BLACK, square_filter)))
 
-        moves_slider = widgets.IntSlider(min=0, max=len(moves_list), step=1, value=0)
-        echo_slider = widgets.IntSlider(min=1, max=len(moves_list), step=2, value=1)
+        moves_slider = widgets.IntSlider(min=0, max=len(moves_list), step=1, value=move)
+        echo_slider = widgets.IntSlider(min=1, max=len(moves_list), step=2, value=echo)
         display(widgets.interactive(applyMoves, move=moves_slider, echo=echo_slider))
         print(curr[2])
 
     metrics_dd = widgets.Dropdown(options=[data.diffReduce, sum], value=data.diffReduce, description='Metric:', disabled=False)
     square_filter_dd = widgets.Dropdown(options=[core.attack, core.defence], value=core.attack, description='Square filter:', disabled=False)
-    games_slider = widgets.IntSlider(min=0, max=len(games)-1, step=1, value=0)
+    games_slider = widgets.IntSlider(min=0, max=len(games)-1, step=1, value=games_id)
     display(widgets.interactive(gameUi, reduced=metrics_dd, square_filter=square_filter_dd, game_id=games_slider))
