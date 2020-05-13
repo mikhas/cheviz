@@ -70,7 +70,7 @@ def makeMoveSequencer(moves_list:list)->Callable:
 def diffReduce(data:list):
     while len(data) > 1:
         data = [data[i] - data[i + 1] for i in range(len(data) - 1)]
-    data = data.pop() if len(data) == 1 else np.zeros(64)
+    data = data.pop() if len(data) == 1 else np.zeros(core.dimension() ** 2)
     return data
 
 # Cell
