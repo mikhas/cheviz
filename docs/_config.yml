@@ -1,9 +1,9 @@
-repository: fastai/nbdev_template
+repository: mikhas/cheviz
 output: web
-topnav_title: nbdev_template
-site_title: nbdev_template
-company_name: Your Name or Company Name
-description: A description of your project
+topnav_title: cheviz
+site_title: cheviz
+company_name: Michael Hasselmann
+description: Using chess to demonstrate  ETL pipelines
 # Set to false to disable KaTeX math
 use_math: true
 # Add Google analytics id if you have one and want to use it here

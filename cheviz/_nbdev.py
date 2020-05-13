@@ -21,8 +21,8 @@ modules = ["core.py",
            "ui.py",
            "stockfish.py"]
 
-doc_url = "https://fastai.github.io/cheviz/"
+doc_url = "https://mikhas.github.io/cheviz/"
 
-git_url = "https://github.com/fastai/cheviz/tree/master/"
+git_url = "https://github.com/mikhas/cheviz/tree/master/"
 
 def custom_doc_links(name): return None
