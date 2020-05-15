@@ -12,6 +12,9 @@ Usually you'd hack on your code, then at one point think you can push it out to 
 
 ### 1.2 Have a proper ETL pipeline, from data to insights.
 
+One goal is to make chess visible in a way that we can approach it like any other data. If we embed the effect of pieces on the board differently, we can reduce a chess game to a series of 8x8 matrices over $\mathbb{N}$. See figure below.
+![Visualized metrics from 1953 candidates tournament](images/euwe-najdorf-zurich1953.png "Visualized metrics from 1953 candidates tournament")
+
 # 2. Install
 
 ## 2.1 miniconda
