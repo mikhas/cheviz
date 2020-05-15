@@ -1,5 +1,5 @@
 # Cheviz
-> An example project to analyze chess positions via visual metrics.
+> Showcase Data engineering and ETL pipelines with chess.
 
 
 # 1. Project goals
