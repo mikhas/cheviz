@@ -46,8 +46,15 @@ See <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Hacking">3. Hacking<a class="anchor-link" href="#3.-Hacking"> </a></h1><p>Install nbdev via <code>pip install nbdev</code>. Before doing anything else, install the nbdev git hooks via <code>nbdev_install_git_hooks</code> otherwise git and Jupyter won't play well together. See <a href="https://nbdev.fast.ai/">https://nbdev.fast.ai/</a> for details.</p>
+<h1 id="3.-Hacking">3. Hacking<a class="anchor-link" href="#3.-Hacking"> </a></h1><h1 id="3.1-nbdev">3.1 nbdev<a class="anchor-link" href="#3.1-nbdev"> </a></h1><p>Install nbdev via <code>pip install nbdev</code>. Before doing anything else, install the nbdev git hooks via <code>nbdev_install_git_hooks</code> otherwise git and Jupyter won't play well together. See <a href="https://nbdev.fast.ai/">https://nbdev.fast.ai/</a> for details.</p>
 <p>You can run <code>make</code> to update the Python library <code>cheviz</code> from the Jupyter notebooks. This also updates the <code>README.md</code>. Remember to adjust <code>settings.ini</code> as needed.</p>
+<h1 id="3.2-Jupyter-widgets">3.2 Jupyter widgets<a class="anchor-link" href="#3.2-Jupyter-widgets"> </a></h1><p>For JupyterLab, just installing ipywidgets via conda isn't enough. We also need nodejs (sigh) because JupyterLab has an extensions system now. Apparently it causes some frustration among users because it wasn't clearly communicated why upgrading from Jupyter Notebooks to JupyterLab broke important functionality. Anyway, we install ipywidgets like so:</p>
+<div class="highlight"><pre><span></span>$ conda install -n <span class="o">[</span>ENV<span class="o">]</span> -c conda-forge ipywidgets
+$ conda install -n <span class="o">[</span>ENV<span class="o">]</span> -c conda-forge nodejs
+$ conda activate <span class="o">[</span>ENV<span class="o">]</span>
+$ jupyter labextension install @jupyter-widgets/jupyterlab-manager
+</pre></div>
+<p>This requires a restart of the Jupyter server to take effect.</p>
 
 </div>
 </div>

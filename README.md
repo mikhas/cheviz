@@ -25,6 +25,21 @@ The `requirements.txt` exists to help setup your conda environment. To install a
 
 # 3. Hacking
 
+# 3.1 nbdev
+
 Install nbdev via `pip install nbdev`. Before doing anything else, install the nbdev git hooks via `nbdev_install_git_hooks` otherwise git and Jupyter won't play well together. See https://nbdev.fast.ai/ for details.
 
 You can run `make` to update the Python library `cheviz` from the Jupyter notebooks. This also updates the `README.md`. Remember to adjust `settings.ini` as needed.
+
+# 3.2 Jupyter widgets
+
+For JupyterLab, just installing ipywidgets via conda isn't enough. We also need nodejs (sigh) because JupyterLab has an extensions system now. Apparently it causes some frustration among users because it wasn't clearly communicated why upgrading from Jupyter Notebooks to JupyterLab broke important functionality. Anyway, we install ipywidgets like so:
+
+```bash
+$ conda install -n [ENV] -c conda-forge ipywidgets
+$ conda install -n [ENV] -c conda-forge nodejs
+$ conda activate [ENV]
+$ jupyter labextension install @jupyter-widgets/jupyterlab-manager
+```
+
+This requires a restart of the Jupyter server to take effect.
