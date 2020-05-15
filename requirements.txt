@@ -27,6 +27,7 @@ entrypoints=0.3=py36h9f0ad1d_1001
 expat=2.2.9=he1b5a44_2
 fastai=1.0.61=1
 fastprogress=0.2.3=py_0
+fastscript=0.1.4=pypi_0
 fontconfig=2.13.1=h86ecdb6_1001
 freetype=2.10.1=he06d7ca_0
 gettext=0.19.8.1=hc5be6a0_1002
@@ -82,6 +83,7 @@ mistune=0.8.4=py36h8c4c3a4_1001
 mkl=2020.1=217
 murmurhash=1.0.0=py36h831f99a_0
 nbconvert=5.6.1=py36h9f0ad1d_1
+nbdev=0.2.18=pypi_0
 nbformat=5.0.6=py_0
 ncurses=6.1=hf484d3e_1002
 ninja=1.10.0=hc9558a2_0
@@ -115,9 +117,13 @@ pygments=2.6.1=py_0
 pyopenssl=19.1.0=py_1
 pyparsing=2.4.7=pyh9f0ad1d_0
 pyqt=5.12.3=py36haa643ae_3
+pyqt5-sip=4.19.18=pypi_0
+pyqtchart=5.12=pypi_0
+pyqtwebengine=5.12.1=pypi_0
 pyrsistent=0.16.0=py36h8c4c3a4_0
 pysocks=1.7.1=py36h9f0ad1d_1
 python=3.6.10=h8356626_1011_cpython
+python-chess=0.31.1=pypi_0
 python-dateutil=2.8.1=py_0
 python_abi=3.6=1_cp36m
 pytorch=1.4.0=py3.6_cuda10.1.243_cudnn7.6.3_0
