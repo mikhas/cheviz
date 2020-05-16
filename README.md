@@ -2,7 +2,7 @@
 > Showcase Data engineering and ETL pipelines with chess.
 
 
-# 1. Project goals
+## 1. Project goals
 
 ### 1.0 Learn stuff.
 
@@ -15,9 +15,9 @@ Usually you'd hack on your code, then at one point think you can push it out to 
 One goal is to make chess visible in a way that we can approach it like any other data. If we embed the effect of pieces on the board differently, we can reduce a chess game to a series of 8x8 matrices over $\mathbb{N}$. See figure below.
 ![Visualized metrics from 1953 candidates tournament](images/euwe-najdorf-zurich1953.png "Visualized metrics from 1953 candidates tournament")
 
-# 2. Install
+## 2. Install
 
-## 2.1 miniconda
+### 2.1 miniconda
 
 You might want to start from miniconda, especially if you are on Windows or an older Linux distribution.
 See https://docs.conda.io/en/latest/miniconda.html for installing miniconda.
@@ -26,15 +26,15 @@ The `requirements.txt` exists to help setup your conda environment. To install a
 
 `$ conda create --name [ENV] --channel pytorch --channel fastai --file requirements.txt`
 
-# 3. Hacking
+## 3. Hacking
 
-# 3.1 nbdev
+### 3.1 nbdev
 
 Install nbdev via `pip install nbdev`. Before doing anything else, install the nbdev git hooks via `nbdev_install_git_hooks` otherwise git and Jupyter won't play well together. See https://nbdev.fast.ai/ for details.
 
 You can run `make` to update the Python library `cheviz` from the Jupyter notebooks. This also updates the `README.md`. Remember to adjust `settings.ini` as needed.
 
-# 3.2 Jupyter widgets
+### 3.2 Jupyter widgets
 
 For JupyterLab, just installing ipywidgets via conda isn't enough. We also need nodejs (sigh) because JupyterLab has an extensions system now. Apparently it causes some frustration among users because it wasn't clearly communicated why upgrading from Jupyter Notebooks to JupyterLab broke important functionality. Anyway, we install ipywidgets like so:
 
