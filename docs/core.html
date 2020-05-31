@@ -157,7 +157,7 @@ It&#39;s safe to set :data:`~Board.turn`, :data:`~Board.castling_rights`,
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;LegalMoveGenerator at 0x7f482b4af978 (Nh3, Nf3, Nc3, Na3, h3, g3, f3, e3, d3, c3, b3, a3, h4, g4, f4, e4, d4, c4, b4, a4)&gt;</pre>
+<pre>&lt;LegalMoveGenerator at 0x7fee5fdb7860 (Nh3, Nf3, Nc3, Na3, h3, g3, f3, e3, d3, c3, b3, a3, h4, g4, f4, e4, d4, c4, b4, a4)&gt;</pre>
 </div>
 
 </div>
@@ -550,7 +550,7 @@ It&#39;s safe to set :data:`~Board.turn`, :data:`~Board.castling_rights`,
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f4811886860&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fee5c1c1198&gt;</pre>
 </div>
 
 </div>
@@ -633,7 +633,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="makeThreatenedSquares" class="doc_header"><code>makeThreatenedSquares</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeThreatenedSquares</code>(<strong>**<code>kwargs</code></strong>)</p>
+<h4 id="reshaped" class="doc_header"><code>reshaped</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>reshaped</code>(<strong><code>data</code></strong>:<code>ndarray</code>)</p>
 </blockquote>
 
 </div>
@@ -657,7 +657,31 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="show" class="doc_header"><code>show</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L37" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show</code>(<strong><code>data</code></strong>:<code>ndarray</code>)</p>
+<h4 id="show" class="doc_header"><code>show</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L21" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show</code>(<strong><code>data</code></strong>:<code>ndarray</code>, <strong><code>ax</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="makeThreatenedSquares" class="doc_header"><code>makeThreatenedSquares</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L29" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>makeThreatenedSquares</code>(<strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -679,7 +703,9 @@ To map board indices to array (matrix) indices we need to compute a row offset a
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fen</span> <span class="o">=</span> <span class="s1">&#39;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&#39;</span>
 <span class="n">ts</span> <span class="o">=</span> <span class="n">makeThreatenedSquares</span><span class="p">(</span><span class="n">fen</span><span class="o">=</span><span class="n">fen</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">))</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="n">ts</span><span class="p">(</span><span class="n">chess</span><span class="o">.</span><span class="n">WHITE</span><span class="p">),</span> <span class="n">ax</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -693,18 +719,8 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f48117bcda0&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-
-
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -746,7 +762,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="defence" class="doc_header"><code>defence</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L42" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>defence</code>(<strong><code>board</code></strong>:<code>Board</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>square</code></strong>:<code>int</code>)</p>
+<h4 id="defence" class="doc_header"><code>defence</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>defence</code>(<strong><code>board</code></strong>:<code>Board</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>square</code></strong>:<code>int</code>)</p>
 </blockquote>
 
 </div>
@@ -770,7 +786,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="attack" class="doc_header"><code>attack</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>attack</code>(<strong><code>board</code></strong>:<code>Board</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>square</code></strong>:<code>int</code>)</p>
+<h4 id="attack" class="doc_header"><code>attack</code><a href="https://github.com/mikhas/cheviz/tree/master/cheviz/core.py#L53" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>attack</code>(<strong><code>board</code></strong>:<code>Board</code>, <strong><code>side</code></strong>:<code>bool</code>, <strong><code>square</code></strong>:<code>int</code>)</p>
 </blockquote>
 
 </div>
@@ -805,7 +821,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f4811730b00&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fee5c066438&gt;</pre>
 </div>
 
 </div>
@@ -850,7 +866,7 @@ To map board indices to array (matrix) indices we need to compute a row offset a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f4811723588&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7fee5c04be10&gt;</pre>
 </div>
 
 </div>
