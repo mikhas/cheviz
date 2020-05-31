@@ -21,7 +21,7 @@ def reshaped(data:np.ndarray)->np.ndarray:
 def show(data:np.ndarray, ax=None):
     dim = dimension()
     if ax is None:
-        return plt.matshow(reshaped(data))
+        plt.matshow(reshaped(data))
     else:
         ax.matshow(reshaped(data))
 

@@ -26,7 +26,8 @@ class Processor:
 
     def run(self, reduced:Callable, square_filter:Callable, echo:int=1, depth:int=20)->pd.DataFrame:
         engine = self.engine_maker()
-        result = pd.DataFrame(columns=['SideThatMoved', 'SideToMove', 'PovScore',
+        result = pd.DataFrame(columns=['SideThatMoved', 'SideToMove',
+                                       'Score', 'PovScore',
                                        'HalfMoveConfiguration', 'FEN',
                                        'LastWhiteMove', 'LastBlackMove',
                                        'ViewForWhite', 'ViewForBlack',
@@ -54,11 +55,13 @@ class Processor:
 
             # would be nice if engine.analyse could be made to run async/in parallel
             current_board = white.board if side else black.board
-            info = engine.analyse(current_board, chess.engine.Limit(depth=depth))
+            score = engine.analyse(current_board, chess.engine.Limit(depth=depth))['score']
 
             result.loc[curr_move] = ['White' if side else 'Black',
                                      'Black' if side else 'White',
-                                     info['score'], (curr_move, adjusted_wm, adjusted_bm),
+                                     int(score.pov(chess.WHITE).__str__()),
+                                     int(score.pov(score.turn).__str__()),
+                                     (curr_move, adjusted_wm, adjusted_bm),
                                      current_board.fen(), last_white_move, last_black_move,
                                      reduced_white, reduced_black,
                                      cda.countZeros(np.logical_or(zeros_white, zeros_black)),
