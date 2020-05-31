@@ -76,7 +76,6 @@ def makeMoveSequencer(moves_list:list)->Callable:
             if index >= adjusted_start and was_our_turn:
                 result.append(ts(side, square_filter))
 
-
         # if no move was found by moves_range, use initial board configuration instead:
         if len(result) == 0:
             result.append(ts(side, square_filter))
