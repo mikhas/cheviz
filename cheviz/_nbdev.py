@@ -8,21 +8,27 @@ index = {"dimension": "00_core.ipynb",
          "defence": "00_core.ipynb",
          "attack": "00_core.ipynb",
          "fetch": "01_data.ipynb",
+         "Game": "01_data.ipynb",
          "from_game": "01_data.ipynb",
          "games": "01_data.ipynb",
+         "MoveSequencerResult": "01_data.ipynb",
          "makeMoveSequencer": "01_data.ipynb",
          "diffReduce": "01_data.ipynb",
+         "countZeros": "01_data.ipynb",
          "makeDiffReduceAnalyzer": "01_data.ipynb",
          "zerosDiffReduce": "01_data.ipynb",
          "showGameUi": "02_ui.ipynb",
          "download": "03_stockfish.ipynb",
          "extract": "03_stockfish.ipynb",
-         "playGame": "03_stockfish.ipynb"}
+         "makeEngine": "03_stockfish.ipynb",
+         "playGame": "03_stockfish.ipynb",
+         "Processor": "04_processor.ipynb"}
 
 modules = ["core.py",
            "data.py",
            "ui.py",
-           "stockfish.py"]
+           "stockfish.py",
+           "processor.py"]
 
 doc_url = "https://mikhas.github.io/cheviz/"
 

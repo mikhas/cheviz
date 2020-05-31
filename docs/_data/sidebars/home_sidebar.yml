@@ -21,6 +21,9 @@ entries:
     - output: web,pdf
       title: cheviz stockfish
       url: /stockfish
+    - output: web,pdf
+      title: cheviz processor
+      url: /processor
     output: web
     title: cheviz
   output: web

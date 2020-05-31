@@ -30,8 +30,8 @@ def showGameUi(games:list, games_id:int=0, move:int=0, echo:int=1):
                 adjusted_wm = move if not board.turn else move - 1
                 adjusted_bm = move if board.turn else move - 1
 
-                core.show(reduced(ms(range(adjusted_wm - echo, adjusted_wm), chess.WHITE, square_filter)))
-                core.show(reduced(ms(range(adjusted_bm - echo, adjusted_bm), chess.BLACK, square_filter)))
+                core.show(reduced(ms(range(adjusted_wm - echo, adjusted_wm), chess.WHITE, square_filter).result))
+                core.show(reduced(ms(range(adjusted_bm - echo, adjusted_bm), chess.BLACK, square_filter).result))
 
         moves_slider = widgets.IntSlider(min=0, max=len(moves_list), step=1, value=move)
         echo_slider = widgets.IntSlider(min=1, max=len(moves_list), step=2, value=echo)
