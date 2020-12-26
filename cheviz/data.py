@@ -62,6 +62,7 @@ class MoveSequencerResult(NamedTuple):
 
 
 def makeMoveSequencer(moves_list:list)->Callable:
+    # to represent the initial position, we insert an 'empty' move in front:
     board = chess.Board()
     ts = core.makeThreatenedSquares(board=board)
 
@@ -69,16 +70,22 @@ def makeMoveSequencer(moves_list:list)->Callable:
         result = []
         board.reset()
 
-        for index in range(0, min(len(moves_list), moves_range.stop)):
+        start = -1 if moves_range.start == - 1 else 0
+        stop = min(len(moves_list), moves_range.stop)
+
+        for index in range(start, stop):
+            # print("loop", index, start, stop)
             was_our_turn = board.turn == side # check *before* pushing next move
             adjusted_start = moves_range.start if was_our_turn else moves_range.start - 1
-            board.push(moves_list[index])
-            if index >= adjusted_start and was_our_turn:
-                result.append(ts(side, square_filter))
 
-        # if no move was found by moves_range, use initial board configuration instead:
-        if len(result) == 0:
-            result.append(ts(side, square_filter))
+            move_to_push = None if index == -1 else moves_list[index]
+            if move_to_push is not None:
+                # print("empty move", index, was_our_turn, adjusted_start)
+                board.push(moves_list[index])
+
+            if index >= adjusted_start and was_our_turn:
+                # print("result push", index, was_our_turn, adjusted_start)
+                result.append(ts(side, square_filter))
 
         return MoveSequencerResult(result, board)
 
