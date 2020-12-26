@@ -108,7 +108,7 @@ dependencies:
   - pexpect=4.8.0
   - pickleshare=0.7.5
   - pillow=7.1.2
-  - pip=20.1
+  - pip=20.1.1
   - plac=0.9.6
   - preshed=3.0.2
   - prometheus_client=0.7.1

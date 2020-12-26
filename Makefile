@@ -25,5 +25,10 @@ pypi: dist
 dist: clean
 	python setup.py sdist bdist_wheel
 
+dist-upgrade:
+	conda env update --file environment.yml  --prune --quiet
+	conda env export --no-builds | grep -v 'prefix:' > environment.yml
+	pip list --format=freeze > requirements.txt
+
 clean:
 	rm -rf dist
